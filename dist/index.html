@@ -33,6 +33,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">RoadMap</a></li>
                         <li class="nav-item"><a class="nav-link" href="trainers.html">View Trainers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Sign Up</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +43,7 @@
             <div class="container">
                 <div class="masthead-subheading"><img src="assets/img/icon.png" alt="..." /></div>
                 <div class="masthead-heading text-uppercase">TAMERS</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Become a Trainer</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Become a Trainer</a>
             </div>
         </header>
         <!-- Services-->
@@ -147,8 +148,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Become A Trainer</h2>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -157,31 +157,31 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="form-to-email.php" method="post" enctype="multipart/form-data">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" name="email" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <!-- Image input-->
+                                <input type="file" name="img" id="img">
+                                <!--<div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>-->
                             </div>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" name="send" id="submitButton" type="submit">Submit</button></div>
                 </form>
             </div>
         </section>
@@ -443,6 +443,6 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
     </body>
 </html>
